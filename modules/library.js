@@ -5,7 +5,6 @@ export default class Library {
     this.addBookForm = document.getElementById('addBookForm');
     this.titleInput = document.getElementById('titleInput');
     this.authorInput = document.getElementById('authorInput');
-    this.dateDisplay = document.querySelector('.currentDate');
 
     this.addBookForm.addEventListener('submit', this.handleFormSubmit.bind(this));
     this.displayBooks();
