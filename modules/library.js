@@ -8,6 +8,13 @@ export default class Library {
 
     this.addBookForm.addEventListener('submit', this.handleFormSubmit.bind(this));
     this.displayBooks();
+
+    this.booksDiv.addEventListener('click', (event) => {
+      if (event.target.classList.contains('remove-button')) {
+        const index = parseInt(event.target.dataset.index, 10);
+        this.removeBook(index);
+      }
+    });
   }
 
   displayBooks() {
@@ -35,11 +42,6 @@ export default class Library {
       removeButton.setAttribute('type', 'button');
       removeButton.setAttribute('data-index', index);
       removeButton.textContent = 'Remove';
-
-      removeButton.addEventListener('click', () => {
-        this.removeBook(index);
-        this.displayBooks(); // Update the display after removing the book
-      });
 
       bookDiv.appendChild(titleSpan);
       bookDiv.appendChild(authorSpan);
