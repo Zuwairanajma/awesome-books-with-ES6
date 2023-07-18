@@ -89,10 +89,4 @@ export default function displayBooks() {
     bookDiv.appendChild(removeButton);
     booksDiv.appendChild(bookDiv);
   });
-
-//   function removeBook(index) {
-//     books.splice(index, 1);
-//     localStorage.setItem('books', JSON.stringify(books));
-//     displayBooks();
-//   }
 }
