@@ -38,6 +38,7 @@ export default class Library {
 
       removeButton.addEventListener('click', () => {
         this.removeBook(index);
+        this.displayBooks(); // Update the display after removing the book
       });
 
       bookDiv.appendChild(titleSpan);
