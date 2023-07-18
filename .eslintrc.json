@@ -23,9 +23,3 @@
       "build/"
     ]
   }
-  // .eslintrc.js
-module.exports = {
-  // Other ESLint configuration options...
-  rules: {
-    'import/prefer-default-export': 'off',
-  },
