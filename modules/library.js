@@ -17,7 +17,7 @@ export default class Library {
     });
   }
 
-  displayBooks() {
+  displayBooks = () => {
     this.booksDiv.innerHTML = '';
 
     if (this.books.length === 0) {
@@ -48,9 +48,9 @@ export default class Library {
       bookDiv.appendChild(removeButton);
       this.booksDiv.appendChild(bookDiv);
     });
-  }
+  };
 
-  addBook(title, author) {
+  addBook = (title, author) => {
     const book = {
       title,
       author,
@@ -59,15 +59,15 @@ export default class Library {
     this.books.push(book);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
-  }
+  };
 
-  removeBook(index) {
+  removeBook = (index) => {
     this.books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
-  }
+  };
 
-  handleFormSubmit(event) {
+  handleFormSubmit = (event) => {
     event.preventDefault();
 
     const title = this.titleInput.value;
@@ -76,5 +76,5 @@ export default class Library {
 
     this.titleInput.value = '';
     this.authorInput.value = '';
-  }
+  };
 }

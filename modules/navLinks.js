@@ -1,4 +1,4 @@
-export default function initializeNavLinks() {
+export const initializeNavLinks = () => {
   const sections = document.getElementsByTagName('section');
   const navLinks = document.getElementsByTagName('a');
 
@@ -15,4 +15,5 @@ export default function initializeNavLinks() {
       }
     });
   }
-}
+};
+export default { initializeNavLinks };
